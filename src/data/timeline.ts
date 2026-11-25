@@ -3,7 +3,6 @@ export type TimelineKind = 'pro' | 'aca'
 export interface TimelineItem {
   period: string
   kind: TimelineKind
-  /** Texto do rótulo acima do título. Se vazio, usa "Profissional"/"Acadêmico". */
   label?: string
   title: string
   org: string
@@ -12,7 +11,6 @@ export interface TimelineItem {
   current?: boolean
 }
 
-/** Da mais recente para a mais antiga. */
 export const timeline: TimelineItem[] = [
   {
     period: '2025 — hoje',

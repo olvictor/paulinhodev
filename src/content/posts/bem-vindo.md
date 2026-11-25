@@ -6,8 +6,6 @@ tags: [pessoal, abap-cloud, estudos]
 draft: false
 ---
 
-Este é um post de exemplo. Cada post é um arquivo **Markdown** dentro de `src/content/posts/`.
-
 ## O que vai ter aqui
 
 Sou desenvolvedor **ABAP Cloud júnior**, e este blog é o meu caderno de estudos. Aqui vou registrar o que estou aprendendo sobre:

@@ -1,8 +1,6 @@
-/** Conteúdo da página Sobre. */
 import photo from '../../public/perfil.jpeg';
 
 export const about = {
-  /** Caminho de uma imagem em /public (ex.: '/foto.jpg'). Deixe null para o placeholder. */
   photo: photo as string | null,
   intro:
     'Atuo como Analista de Sistemas SAP ABAP CLOUD, onde venho desenvolvendo meus conhecimentos em SAP, ABAP, S/4HANA.',
