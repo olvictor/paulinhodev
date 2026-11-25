@@ -85,20 +85,28 @@ Regra prática: **se não é liberado, não pode ser usado**. Quando falta uma A
 
 O que diferencia os três modelos é **quem faz**, **com qual ferramenta** e, principalmente, **onde a solução roda**.
 
-```
-┌──────────────────────────────────────────────┐        ┌─────────────────────────────┐
-│        SAP S/4HANA Cloud Public Edition       │        │          SAP BTP            │
-│                                              │        │                             │
-│  ┌────────────────┐   ┌────────────────────┐ │  API   │  ┌───────────────────────┐  │
-│  │   KEY USER     │   │     DEVELOPER      │ │ OData  │  │     SIDE-BY-SIDE      │  │
-│  │ (apps Fiori)   │   │ (ABAP Cloud / ADT) │ │◄──────►│  │ CAP, ABAP Environment,│  │
-│  │                │   │                    │ │ SOAP   │  │ Build Apps, SBPA,     │  │
-│  └────────────────┘   └────────────────────┘ │ Events │  │ Integration Suite...  │  │
-│         ▲ roda DENTRO do S/4 ▲               │        │  └───────────────────────┘  │
-│                                              │        │      ▲ roda FORA do S/4     │
-│          Código standard SAP (intocável)      │        │                             │
-└──────────────────────────────────────────────┘        └─────────────────────────────┘
-```
+<div class="ext-diagram" role="img" aria-label="Key user e developer extensibility rodam dentro do S/4HANA Cloud; side-by-side roda fora, na SAP BTP, e se comunica por API, OData, SOAP e eventos.">
+<div class="ext-zone">
+<div class="ext-zone-title">SAP S/4HANA Cloud Public Edition</div>
+<div class="ext-cards">
+<div class="ext-card"><span class="ext-kind">Key user</span><strong>Apps Fiori</strong><small>Custom Fields, Custom Logic, CBO…</small></div>
+<div class="ext-card"><span class="ext-kind">Developer</span><strong>ABAP Cloud / ADT</strong><small>RAP, CDS, BAdIs, ABAP Unit…</small></div>
+</div>
+<div class="ext-where">▲ roda <b>dentro</b> do S/4</div>
+<div class="ext-core">Código standard SAP · intocável</div>
+</div>
+<div class="ext-link" aria-hidden="true">
+<span class="ext-line"></span>
+<div class="ext-protocols"><span>API</span><span>OData</span><span>SOAP</span><span>Events</span></div>
+</div>
+<div class="ext-zone ext-zone-btp">
+<div class="ext-zone-title">SAP BTP</div>
+<div class="ext-cards">
+<div class="ext-card ext-card-accent"><span class="ext-kind">Side-by-side</span><strong>Apps e serviços na BTP</strong><small>CAP, ABAP Environment, Build Apps, SBPA, Integration Suite…</small></div>
+</div>
+<div class="ext-where">▲ roda <b>fora</b> do S/4</div>
+</div>
+</div>
 
 ### 4.1 Key user extensibility
 
