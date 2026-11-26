@@ -15,7 +15,7 @@ export const projects: Project[] = [
     slug: 'projeto-um',
     title: 'Wiki latam',
     year: '2025',
-    description: 'Uma frase sobre o problema que o projeto resolve e o que ele tem de interessante.',
+    description: 'Guia de ragnarok online.',
     stack: ['python', 'flask', 'Pandas'],
     repo: 'https://github.com/olvictor/wiki-latam/',
     demo: 'https://www.rolaguiada.com.br/',
